@@ -1,4 +1,4 @@
-import '../styles/global.css'
+import '../styles/globals.css'
 import 'destyle.css/destyle.css'
 import { AppProps } from 'next/app'
 import { FC } from 'react'
