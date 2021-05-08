@@ -31,11 +31,9 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
     <header className="bg-white">
         <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between">
-              <Image src="/logo.png" width={82.5} height={25} alt="survaq" />
-
-
+              <h1><Image src="/logo.png" width={82.5} height={25} alt="survaq" /></h1>
                 <div onClick={() => setOpenMenu((prev) => !prev)} className="flex md:hidden">
-                    <button type="button" className="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+                    <button type="button" className="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
                         aria-label="toggle menu">
                         <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
                             <path fillRule="evenodd"
@@ -47,31 +45,31 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
             </div>
 
             <div className={`${openMenu ? 'flex' : 'hidden'} flex-col mt-2 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0`}>
-                <a className="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                <a className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
                     href="#">Home</a>
-                <a className="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                <a className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
                     href="#">Templates</a>
-                <a className="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                <a className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
                     href="#">Price</a>
-                <a className="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                <a className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
                     href="#">Help</a>
             </div>
         </nav>
 
-        <section className="flex items-center justify-center" style={{height: 500}}>
+        <section className="flex relative items-center justify-center" style={{height: 400}}>
             <div className="text-center">
-                <p className="text-xl font-medium tracking-wider text-gray-300">Lorem ipsum dolor</p>
-                <h2 className="mt-6 text-3xl font-bold text-white md:text-5xl">Lorem ipsum dolor sit amet, <br /> consectetur
-                    adipiscing elit</h2>
+              {/* {data.header.image && <Image src={data.header.image.url} height={data.header.image.height} width={data.header.image.width} alt="main visual" />} */}
+              <h2 className="text-3xl md:text-5xl font-bold tracking-wider text-gray-800 whitespace-pre-wrap">{data.header.text}</h2>
 
-                <div className="flex justify-center mt-8">
-                    <a className="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500"
-                        href="#">Get In Touch</a>
-                </div>
             </div>
         </section>
-    </header>
-
+        </header>
+        <section className="bg-white">
+        <div className="max-w-6xl px-6 py-16 mx-auto text-center">
+            <h2 className="text-3xl font-semibold text-gray-800">Mission</h2>
+            <p className="max-w-full mx-auto mt-4 leading-relaxed text-gray-600 whitespace-pre-wrap">{data.mission.text}</p>
+        </div>
+    </section>
 
     <section className="bg-white">
         <div className="max-w-5xl px-6 py-16 mx-auto">
