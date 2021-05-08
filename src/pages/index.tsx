@@ -1,9 +1,11 @@
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import { FC, useEffect, useState } from 'react'
+import { Top as TopType } from '../types/top'
+import Head from 'next/head'
 
 interface TopProps {
-  data: any
+  data: TopType
 }
 
 const Top: FC<TopProps> = ({ data: serverSideData }) => {
@@ -17,9 +19,14 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
       .catch(() => null)
   }, [router])
 
-  console.log(data)
-
-  return null
+  return (
+    <>
+      <Head>
+        <title>{data.meta.title}</title>
+        <meta name="description" content={data.meta.description} />
+      </Head>
+    </>
+  )
 }
 
 export default Top
