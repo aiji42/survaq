@@ -67,7 +67,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
             <h2 className="text-3xl font-semibold text-gray-800">Mission</h2>
-            <p className="max-w-full mx-auto mt-4 leading-relaxed text-gray-600 whitespace-pre-wrap">{data.mission.text}</p>
+            <p className="max-w-full mx-auto mt-4 leading-relaxed text-gray-500 whitespace-pre-wrap">{data.mission.text}</p>
           </div>
         </section>
 
@@ -76,13 +76,37 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
             <h2 className="text-3xl font-semibold text-gray-800">Bussiness</h2>
 
             <div className="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-4">
-              {data.bussinesses.map((item) => (
-                <div key={item.title} className="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
+              {data.bussinesses.map((item, index) => (
+                <div key={index} className="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
                   {item.image && <div className="mb-8 px-8"><Image src={item.image.url} height={item.image.height} width={item.image.width} alt={item.title} /></div>}
                   <h3 className="text-lg text-gray-600">{item.title}</h3>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-white">
+          <div className="max-w-6xl px-6 py-16 mx-auto text-center">
+            <h2 className="text-3xl font-semibold text-gray-800">Products</h2>
+            {data.products.map((item, index) => (
+                <div key={index} className="max-w-5xl px-6 py-16 mx-auto">
+                  <div className="items-center md:flex md:space-x-6">
+                      <div className="md:w-1/2">
+                          <div className="flex items-center justify-center">
+                              <div className="max-w-md">
+                                  {item.image && <Image src={item.image.url} height={item.image.height} width={item.image.width} alt={item.title} />}
+                              </div>
+                          </div>
+                      </div>
+
+                      <div className="mt-8 md:mt-0 md:w-1/2">
+                        <h3 className="text-lg md:text-left font-semibold text-gray-600">{item.title}</h3>
+                        <p className="max-w-md mt-4 md:text-left text-gray-500 whitespace-pre-wrap">{item.text}</p>
+                      </div>
+                  </div>
+              </div>
+              ))}
           </div>
         </section>
 
