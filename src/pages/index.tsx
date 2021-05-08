@@ -3,6 +3,7 @@ import { useRouter } from 'next/dist/client/router'
 import { FC, useEffect, useState } from 'react'
 import { Top as TopType } from '../types/top'
 import Head from 'next/head'
+import Image from 'next/image'
 
 interface TopProps {
   data: TopType
@@ -27,11 +28,11 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
         <meta name="description" content={data.meta.description} />
       </Head>
       <div>
-    <header className="bg-gray-800">
+    <header className="bg-white">
         <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between">
-                <a className="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
-                    href="#">Brand</a>
+              <Image src="/logo.png" width={82.5} height={25} alt="survaq" />
+
 
                 <div onClick={() => setOpenMenu((prev) => !prev)} className="flex md:hidden">
                     <button type="button" className="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
