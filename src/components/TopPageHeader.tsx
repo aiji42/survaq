@@ -80,7 +80,7 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
             className="absolute w-full"
             style={{ transform: 'translateY(-50%)' }}
           >
-            <h1 className="text-3xl md:text-5xl font-title font-bold tracking-wide text-gray-800 whitespace-pre-wrap">
+            <h1 className="text-4xl md:text-5xl font-title font-bold tracking-wide text-gray-800 whitespace-pre-wrap">
               {header.text}
             </h1>
           </div>
