@@ -7,7 +7,7 @@ export const Bussiness: FC<Top> = ({ bussinesses }) => {
     <section className="bg-white">
       <div className="max-w-6xl px-6 py-16 mx-auto text-center">
         <h2
-          className="text-3xl font-semibold text-gray-800 underline"
+          className="text-3xl font-semibold text-gray-800 underline tracking-wider"
           id="bussiness"
         >
           Bussiness
