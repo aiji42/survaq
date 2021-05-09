@@ -16,7 +16,7 @@ export const Products: FC<Top> = ({ products }) => {
           <div key={index} className="max-w-5xl px-6 pt-16 mx-auto">
             <a
               href={item.url}
-              className="items-center md:flex md:space-x-6 block hover:shadow-lg"
+              className="items-center md:flex md:space-x-6 block"
             >
               <div className="md:w-1/2">
                 <div className="flex items-center justify-center">
