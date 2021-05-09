@@ -31,9 +31,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
         <header className="bg-white">
           <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between">
-              <h1>
-                <Image src="/logo.png" width={82.5} height={25} alt="survaq" />
-              </h1>
+              <p><Image src="/logo.png" width={82.5} height={25} alt="survaq" priority /></p>
               <div
                 onClick={() => setOpenMenu((prev) => !prev)}
                 className="flex md:hidden"
@@ -97,6 +95,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
                     layout="fill"
                     objectFit="cover"
                     alt="main visual"
+                    priority
                   />
                 )}
               </div>
@@ -104,9 +103,9 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
                 className="absolute w-full"
                 style={{ transform: "translateY(-50%)" }}
               >
-                <h2 className="text-3xl md:text-5xl font-bold tracking-widest text-gray-800 whitespace-pre-wrap">
+                <h1 className="text-3xl md:text-5xl font-bold tracking-widest text-gray-800 whitespace-pre-wrap">
                   {data.header.text}
-                </h2>
+                </h1>
               </div>
             </div>
           </section>
@@ -114,7 +113,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800" id="mission">Mission</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 underline" id="mission">Mission</h2>
             <p className="max-w-full mx-auto mt-4 leading-relaxed text-gray-500 whitespace-pre-wrap">
               {data.mission.text}
             </p>
@@ -123,8 +122,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800" id="bussiness">Bussiness</h2>
-
+            <h2 className="text-3xl font-semibold text-gray-800 underline" id="bussiness">Bussiness</h2>
             <div className="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-4">
               {data.bussinesses.map((item, index) => (
                 <div
@@ -150,7 +148,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800" id="products">Products</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 underline" id="products">Products</h2>
             {data.products.map((item, index) => (
               <div key={index} className="max-w-5xl px-6 pt-16 mx-auto">
                 <div className="items-center md:flex md:space-x-6">
@@ -185,7 +183,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800" id="company">Company</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 underline" id="company">Company</h2>
             <div className="max-w-5xl px-6 py-16 mx-auto">
               <div className="items-center md:flex md:space-x-6">
                 <div className="md:w-1/3">
