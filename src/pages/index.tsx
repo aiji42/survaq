@@ -86,14 +86,28 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
           </nav>
 
           <section
-            className="flex relative items-center justify-center"
+            className="flex relative items-center"
             style={{ height: 400 }}
           >
             <div className="text-center">
-              {/* {data.header.image && <Image src={data.header.image.url} height={data.header.image.height} width={data.header.image.width} alt="main visual" />} */}
-              <h2 className="text-3xl md:text-5xl font-bold tracking-wider text-gray-800 whitespace-pre-wrap">
-                {data.header.text}
-              </h2>
+              <div className="opacity-50">
+                {data.header.image && (
+                  <Image
+                    src={data.header.image.url}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="main visual"
+                  />
+                )}
+              </div>
+              <div
+                className="absolute w-full"
+                style={{ transform: "translateY(-50%)" }}
+              >
+                <h2 className="text-3xl md:text-5xl font-bold tracking-widest text-gray-800 whitespace-pre-wrap">
+                  {data.header.text}
+                </h2>
+              </div>
             </div>
           </section>
         </header>
