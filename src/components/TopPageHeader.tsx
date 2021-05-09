@@ -9,24 +9,28 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
     <header className="bg-white">
       <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
-          <p><Image src="/logo.png" width={82.5} height={25} alt="survaq" priority /></p>
-          <div
+          <p>
+            <Image
+              src="/logo.png"
+              width={82.5}
+              height={25}
+              alt="survaq"
+              priority
+            />
+          </p>
+          <button
+            type="button"
+            className="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 md:hidden"
+            aria-label="toggle menu"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="flex md:hidden"
           >
-            <button
-              type="button"
-              className="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-              aria-label="toggle menu"
-            >
-              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-            </button>
-          </div>
+            <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+              <path
+                fillRule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              ></path>
+            </svg>
+          </button>
         </div>
 
         <div
@@ -61,10 +65,7 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
         </div>
       </nav>
 
-      <section
-        className="flex relative items-center"
-        style={{ height: 400 }}
-      >
+      <section className="flex relative items-center" style={{ height: 400 }}>
         <div className="text-center">
           <div className="opacity-50">
             {header.image && (
@@ -88,5 +89,5 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
         </div>
       </section>
     </header>
-  )
+  );
 }
