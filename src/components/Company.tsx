@@ -6,7 +6,7 @@ export const Company: FC<Top> = ({ company }) => {
     <section className="bg-white">
       <div className="max-w-6xl px-6 py-16 mx-auto text-center">
         <h2
-          className="text-3xl font-semibold text-gray-800 underline tracking-wider"
+          className="text-3xl text-gray-800 tracking-wide font-title"
           id="company"
         >
           Company
