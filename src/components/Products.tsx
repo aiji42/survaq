@@ -14,7 +14,10 @@ export const Products: FC<Top> = ({ products }) => {
         </h2>
         {products.map((item, index) => (
           <div key={index} className="max-w-5xl px-6 pt-16 mx-auto">
-            <div className="items-center md:flex md:space-x-6">
+            <a
+              href={item.url}
+              className="items-center md:flex md:space-x-6 block hover:shadow-lg"
+            >
               <div className="md:w-1/2">
                 <div className="flex items-center justify-center">
                   <div className="max-w-md">
@@ -38,7 +41,7 @@ export const Products: FC<Top> = ({ products }) => {
                   {item.text}
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>

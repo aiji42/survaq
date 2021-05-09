@@ -9,15 +9,13 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
     <header className="bg-white">
       <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
-          <p>
-            <Image
-              src="/logo.png"
-              width={82.5}
-              height={25}
-              alt="survaq"
-              priority
-            />
-          </p>
+          <Image
+            src="/logo.png"
+            width={82.5}
+            height={25}
+            alt="survaq"
+            priority
+          />
           <button
             type="button"
             className="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 md:hidden"
