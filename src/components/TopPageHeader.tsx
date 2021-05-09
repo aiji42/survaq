@@ -63,9 +63,9 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
         </div>
       </nav>
 
-      <section className="flex relative items-center" style={{ height: 400 }}>
+      <section className="flex relative items-center" style={{ height: 250 }}>
         <div className="text-center">
-          <div className="opacity-50">
+          <div className="opacity-40">
             {header.image && (
               <Image
                 src={header.image.url}
@@ -80,7 +80,7 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
             className="absolute w-full"
             style={{ transform: 'translateY(-50%)' }}
           >
-            <h1 className="text-3xl md:text-5xl font-bold tracking-widest text-gray-800 whitespace-pre-wrap">
+            <h1 className="text-3xl md:text-5xl font-title font-bold tracking-wide text-gray-800 whitespace-pre-wrap">
               {header.text}
             </h1>
           </div>
