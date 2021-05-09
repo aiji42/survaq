@@ -1,6 +1,6 @@
-import {FC, useState} from 'react';
-import { Top } from "../types/top";
-import Image from 'next/image';
+import { FC, useState } from 'react'
+import { Top } from '../types/top'
+import Image from 'next/image'
 
 export const TopPageHeader: FC<Top> = ({ header }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +33,7 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
 
         <div
           className={`${
-            isOpen ? "flex" : "hidden"
+            isOpen ? 'flex' : 'hidden'
           } flex-col mt-4 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0`}
         >
           <a
@@ -78,7 +78,7 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
           </div>
           <div
             className="absolute w-full"
-            style={{ transform: "translateY(-50%)" }}
+            style={{ transform: 'translateY(-50%)' }}
           >
             <h1 className="text-3xl md:text-5xl font-bold tracking-widest text-gray-800 whitespace-pre-wrap">
               {header.text}
@@ -87,5 +87,5 @@ export const TopPageHeader: FC<Top> = ({ header }) => {
         </div>
       </section>
     </header>
-  );
+  )
 }

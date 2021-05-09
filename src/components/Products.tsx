@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Top } from "../types/top";
-import Image from 'next/image';
+import { FC } from 'react'
+import { Top } from '../types/top'
+import Image from 'next/image'
 
 export const Products: FC<Top> = ({ products }) => {
   return (
@@ -46,5 +46,5 @@ export const Products: FC<Top> = ({ products }) => {
         ))}
       </div>
     </section>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC } from 'react'
 
 export const Footer: FC<{ copyright: string }> = ({ copyright }) => {
   return (
@@ -7,5 +7,5 @@ export const Footer: FC<{ copyright: string }> = ({ copyright }) => {
         <p className="text-gray-500">{copyright}</p>
       </div>
     </footer>
-  );
-};
+  )
+}
