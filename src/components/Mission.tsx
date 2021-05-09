@@ -11,7 +11,7 @@ export const Mission: FC<Top> = ({ mission }) => {
         >
           Mission
         </h2>
-        <p className="max-w-full mx-auto mt-8 leading-relaxed text-gray-500 whitespace-pre-wrap">
+        <p className="max-w-full mx-auto mt-10 leading-relaxed text-gray-500 whitespace-pre-wrap">
           {mission.text}
         </p>
       </div>

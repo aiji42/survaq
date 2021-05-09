@@ -11,7 +11,7 @@ export const Company: FC<Top> = ({ company }) => {
         >
           Company
         </h2>
-        <div className="max-w-5xl px-6 py-16 mx-auto">
+        <div className="max-w-5xl px-6 py-10 mx-auto">
           <div className="items-center md:flex md:space-x-6">
             <div className="md:w-1/3">
               <div
