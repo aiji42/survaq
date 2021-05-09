@@ -56,31 +56,31 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
             <div
               className={`${
                 openMenu ? "flex" : "hidden"
-              } flex-col mt-2 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0`}
+              } flex-col mt-4 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0`}
             >
               <a
                 className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-                href="#"
+                href="#mission"
               >
-                Home
+                Mission
               </a>
               <a
                 className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-                href="#"
+                href="#bussiness"
               >
-                Templates
+                Bussiness
               </a>
               <a
                 className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-                href="#"
+                href="#products"
               >
-                Price
+                Products
               </a>
               <a
                 className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-                href="#"
+                href="#company"
               >
-                Help
+                Company
               </a>
             </div>
           </nav>
@@ -114,7 +114,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800">Mission</h2>
+            <h2 className="text-3xl font-semibold text-gray-800" id="mission">Mission</h2>
             <p className="max-w-full mx-auto mt-4 leading-relaxed text-gray-500 whitespace-pre-wrap">
               {data.mission.text}
             </p>
@@ -123,7 +123,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800">Bussiness</h2>
+            <h2 className="text-3xl font-semibold text-gray-800" id="bussiness">Bussiness</h2>
 
             <div className="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-4">
               {data.bussinesses.map((item, index) => (
@@ -150,7 +150,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800">Products</h2>
+            <h2 className="text-3xl font-semibold text-gray-800" id="products">Products</h2>
             {data.products.map((item, index) => (
               <div key={index} className="max-w-5xl px-6 pt-16 mx-auto">
                 <div className="items-center md:flex md:space-x-6">
@@ -185,7 +185,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
 
         <section className="bg-white">
           <div className="max-w-6xl px-6 py-16 mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800">Company</h2>
+            <h2 className="text-3xl font-semibold text-gray-800" id="company">Company</h2>
             <div className="max-w-5xl px-6 py-16 mx-auto">
               <div className="items-center md:flex md:space-x-6">
                 <div className="md:w-1/3">
