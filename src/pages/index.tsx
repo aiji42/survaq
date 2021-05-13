@@ -29,6 +29,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
     <>
       <Head>
         <title>{data.meta.title}</title>
+        <link rel="icon" href={data.images.favicon.url} />
         <meta name="description" content={data.meta.description} />
       </Head>
       <div>

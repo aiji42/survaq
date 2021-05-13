@@ -4,6 +4,11 @@ interface Image {
   width: number
 }
 
+interface Images {
+  logo: Image
+  favicon: Image
+}
+
 export interface Meta {
   copyright: string
   description: string
@@ -29,6 +34,7 @@ export interface Top {
   products: Array<Item>
   company: Company
   meta: Meta
+  images: Images
   createdAt: string
   publishedAt: string
   revisedAt: string
