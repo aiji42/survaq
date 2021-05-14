@@ -59,8 +59,8 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
       </Head>
       <div className="max-w-3xl mx-auto px-2 relative">
         <div className="flex md:justify-between">
-          <div className="w-80 mt-10">
-            <ul className="sticky top-32">
+          <div className="w-64">
+            <ul className="sticky top-8">
               <li className="mb-5">
                 <img
                   src="https://survaq.com/assets/eyecamera/F.webp"
@@ -87,8 +87,12 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
               </li>
             </ul>
           </div>
-          <div className="md:ml-20"></div>
-          <Post body={data.body} />
+          <div className="md:ml-16">
+            <Post body={data.body} />
+            <div className="sticky bottom-0 w-full border-t-2 border-l-2 border-r-2 border-blue-500 border-opacity-25 bg-white">
+              <img src="/footer.png" />
+            </div>
+          </div>
         </div>
       </div>
     </>
