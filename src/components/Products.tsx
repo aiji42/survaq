@@ -20,7 +20,7 @@ export const Products: FC<Top> = ({ products }) => {
             >
               <div className="md:w-1/2">
                 <div className="flex items-center justify-center">
-                  <div className="max-w-md">
+                  <div className="max-w-md shadow-sm">
                     {item.image && (
                       <Image
                         src={item.image.url}
