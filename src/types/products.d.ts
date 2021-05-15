@@ -24,6 +24,13 @@ export interface Meta {
   twitterSite?: string
 }
 
+export interface ShortCode {
+  code: string
+  body: string
+}
+
+type ShortCodes = Array<ShortCode>
+
 export interface SocialLinks {
   facebook?: string
   twitter?: string
@@ -39,6 +46,7 @@ export interface Product {
   revisedAt: string
   title: string
   body: string
+  shortCodes?: ShortCodes
   images: Images
   meta: Meta
   socialLinks: SocialLinks

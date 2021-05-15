@@ -7,7 +7,7 @@ import { Post } from '../../components/Post'
 import { SnsButtons } from '../../components/SnsButtons'
 
 interface ProductProps {
-  data: Product
+  data: Product | null
 }
 
 const Products: FC<ProductProps> = ({ data: serverSideData }) => {
@@ -79,7 +79,6 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
 
 export default Products
 
-
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   return {
     paths: [],
@@ -87,12 +86,25 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<ProductProps, { id: string }> = async ({ params }) => {
-  const data = await fetch(`${process.env.MICRO_CMS_API_ENDPOINT}/products/${params?.id}`, {
-    headers: { 'X-API-KEY': process.env.MICRO_CMS_API_KEY ?? '' }
-  })
+export const getStaticProps: GetStaticProps<
+  ProductProps,
+  { id: string }
+> = async ({ params }) => {
+  const data: null | Product = await fetch(
+    `${process.env.MICRO_CMS_API_ENDPOINT}/products/${params?.id}`,
+    {
+      headers: { 'X-API-KEY': process.env.MICRO_CMS_API_KEY ?? '' }
+    }
+  )
     .then((res) => res.json())
     .catch(() => null)
+
+  data?.shortCodes?.forEach(({ code, body }) => {
+    data.body = data.body.replace(
+      new RegExp(`&lt;&lt;${code}&gt;&gt;`, 'g'),
+      body
+    )
+  })
 
   return {
     props: {
