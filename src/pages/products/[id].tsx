@@ -59,7 +59,12 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
         )}
       </Head>
       <div className="max-w-3xl mx-auto pt-4 md:pt-10">
-        <div className="flex">
+        <div className="px-2">
+          <h1 className="font-bold text-3xl md:text-4xl whitespace-pre-wrap">
+            {data.title}
+          </h1>
+        </div>
+        <div className="flex py-8">
           <div className="hidden md:block mr-10">
             <div className="sticky top-10">
               <SnsButtons {...data} />
