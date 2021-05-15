@@ -58,20 +58,20 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
           <meta name="twitter:site" content={data.meta.twitterSite} />
         )}
       </Head>
-      <div className="max-w-3xl mx-auto px-2 pt-4 md:pt-10">
+      <div className="max-w-3xl mx-auto pt-4 md:pt-10">
         <div className="flex">
           <div className="hidden md:block mr-10">
             <div className="sticky top-10">
               <SnsButtons {...data} />
             </div>
           </div>
-          <div className="">
-            <Post body={data.body} />
-            <div className="sticky bottom-0 w-full border-t-2 border-l-2 border-r-2 border-blue-500 border-opacity-25 bg-white">
-              <img src="/footer.png" />
-            </div>
+          <div className="px-2">
+            <Post {...data} />
           </div>
         </div>
+      </div>
+      <div className="md:hidden sticky bottom-0 py-2 w-full bg-gray-100">
+        <SnsButtons {...data} flex />
       </div>
     </>
   )
