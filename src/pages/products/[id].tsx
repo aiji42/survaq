@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import { FC, useEffect, useState } from 'react'
-import Head from 'next/head'
 import { Product } from '../../types/products'
 import { Post } from '../../components/Post'
 import { SnsButtons } from '../../components/SnsButtons'
+import { ProductHead } from '../../components/ProductHead'
 
 interface ProductProps {
   data: Product | null
@@ -24,40 +24,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
   if (!data) return null
   return (
     <>
-      <Head>
-        <title>{data.meta.title}</title>
-        <link rel="icon" href={data.images.favicon.url} />
-        <meta name="description" content={data.meta.description} />
-        <meta
-          property="og:title"
-          content={data.meta.ogTitle ?? data.meta.title}
-        />
-        <meta
-          property="og:description"
-          content={data.meta.ogDescription ?? data.meta.description}
-        />
-        {data.meta.ogType && (
-          <meta property="og:type" content={data.meta.ogType[0]} />
-        )}
-        {data.meta.ogUrl && (
-          <meta property="og:url" content={data.meta.ogUrl} />
-        )}
-        {data.meta.ogSiteName && (
-          <meta property="og:site_name" content={data.meta.ogSiteName} />
-        )}
-        {data.meta.ogImage && (
-          <meta property="og:image" content={data.meta.ogImage.url} />
-        )}
-        {data.meta.fbAppId && (
-          <meta property="fb:app_id" content={data.meta.fbAppId} />
-        )}
-        {data.meta.twitterCard && (
-          <meta name="twitter:card" content={data.meta.twitterCard[0]} />
-        )}
-        {data.meta.twitterSite && (
-          <meta name="twitter:site" content={data.meta.twitterSite} />
-        )}
-      </Head>
+      <ProductHead {...data} />
       <div className="max-w-3xl mx-auto pt-4 md:pt-10">
         <div className="px-2">
           <h1 className="font-bold text-3xl md:text-4xl whitespace-pre-wrap">
