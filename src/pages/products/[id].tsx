@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from 'react'
 import Head from 'next/head'
 import { Product } from '../../types/products'
 import { Post } from '../../components/Post'
+import { SnsButtons } from '../../components/SnsButtons'
 
 interface ProductProps {
   data: Product
@@ -57,37 +58,14 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
           <meta name="twitter:site" content={data.meta.twitterSite} />
         )}
       </Head>
-      <div className="max-w-3xl mx-auto px-2 relative">
-        <div className="flex md:justify-between">
-          <div className="w-64">
-            <ul className="sticky top-8">
-              <li className="mb-5">
-                <img
-                  src="https://survaq.com/assets/eyecamera/F.webp"
-                  alt="Twitter"
-                />
-              </li>
-              <li className="mb-5">
-                <img
-                  src="https://survaq.com/assets/eyecamera/T.png"
-                  alt="Twitter"
-                />
-              </li>
-              <li className="mb-5">
-                <img
-                  src="https://survaq.com/assets/eyecamera/B.png"
-                  alt="Twitter"
-                />
-              </li>
-              <li className="mb-5">
-                <img
-                  src="https://survaq.com/assets/eyecamera/L.png"
-                  alt="Twitter"
-                />
-              </li>
-            </ul>
+      <div className="max-w-3xl mx-auto px-2 pt-4 md:pt-10">
+        <div className="flex">
+          <div className="hidden md:block mr-10">
+            <div className="sticky top-10">
+              <SnsButtons />
+            </div>
           </div>
-          <div className="md:ml-16">
+          <div className="">
             <Post body={data.body} />
             <div className="sticky bottom-0 w-full border-t-2 border-l-2 border-r-2 border-blue-500 border-opacity-25 bg-white">
               <img src="/footer.png" />
