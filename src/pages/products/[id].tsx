@@ -64,15 +64,13 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
             {data.title}
           </h1>
         </div>
-        <div className="flex py-8">
+        <div className="flex py-8 px-2">
           <div className="hidden md:block mr-10">
             <div className="sticky top-10">
               <SnsButtons {...data} />
             </div>
           </div>
-          <div className="px-2">
-            <Post {...data} />
-          </div>
+          <Post {...data} />
         </div>
       </div>
       <div className="md:hidden sticky bottom-0 py-2 w-full bg-gray-100">
