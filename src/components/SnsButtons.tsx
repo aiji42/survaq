@@ -6,7 +6,7 @@ export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
   flex = false
 }) => {
   return (
-    <ul className={flex ? "flex justify-evenly" : ''}>
+    <ul className={flex ? 'flex justify-evenly' : ''}>
       {socialLinks.facebook && (
         <li className={flex ? 'w-12' : 'w-12 mb-4'}>
           <a
@@ -14,10 +14,7 @@ export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="/facebook.png"
-              alt="Facebook"
-            />
+            <img src="/facebook.png" alt="Facebook" />
           </a>
         </li>
       )}
@@ -28,10 +25,7 @@ export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="/twitter.png"
-              alt="Twitter"
-            />
+            <img src="/twitter.png" alt="Twitter" />
           </a>
         </li>
       )}
@@ -42,20 +36,14 @@ export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="/hatena.png"
-              alt="HatenaBookmark"
-            />
+            <img src="/hatena.png" alt="HatenaBookmark" />
           </a>
         </li>
       )}
       {socialLinks.line && (
         <li className={flex ? 'w-12' : 'w-12 mb-4'}>
           <a href={socialLinks.line} target="_blank" rel="noopener noreferrer">
-            <img
-              src="/line.png"
-              alt="Line"
-            />
+            <img src="/line.png" alt="Line" />
           </a>
         </li>
       )}
