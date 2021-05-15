@@ -24,6 +24,13 @@ export interface Meta {
   twitterSite?: string
 }
 
+export interface SocialLinks {
+  facebook?: string
+  twitter?: string
+  hatena?: string
+  line?: string
+}
+
 export interface Product {
   id: string
   createdAt: string
@@ -34,4 +41,5 @@ export interface Product {
   body: string
   images: Images
   meta: Meta
+  socialLinks: SocialLinks
 }

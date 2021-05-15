@@ -62,7 +62,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
         <div className="flex">
           <div className="hidden md:block mr-10">
             <div className="sticky top-10">
-              <SnsButtons />
+              <SnsButtons {...data} />
             </div>
           </div>
           <div className="">
