@@ -6,6 +6,7 @@ import { Post } from '../../components/Post'
 import { SnsButtons } from '../../components/SnsButtons'
 import { ProductHead } from '../../components/ProductHead'
 import Image from 'next/image'
+import { route } from 'next/dist/next-server/server/router'
 
 interface ProductProps {
   data: Product | null
@@ -13,14 +14,19 @@ interface ProductProps {
 
 const Products: FC<ProductProps> = ({ data: serverSideData }) => {
   const [data, setData] = useState<ProductProps['data'] | null>(serverSideData)
-  // const router = useRouter()
-  // useEffect(() => {
-  //   if (!router.query.preview) return
-  //   fetch(`/api/preview?draftKey=${router.query.preview}`)
-  //     .then((res) => res.json())
-  //     .then(setData)
-  //     .catch(() => null)
-  // }, [router])
+  const router = useRouter()
+  useEffect(() => {
+    if (!router.query.preview) return
+    fetch(
+      `/api/preview/products/${router.query.id}?draftKey=${router.query.preview}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        replaceBody(data)
+        setData(data)
+      })
+      .catch(() => null)
+  }, [router])
 
   if (!data) return null
   return (
@@ -103,6 +109,17 @@ export const getStaticProps: GetStaticProps<
       revalidate: 5
     }
 
+  replaceBody(data)
+
+  return {
+    props: {
+      data
+    },
+    revalidate: 5
+  }
+}
+
+const replaceBody = (data: Product) => {
   data.shortCodes?.forEach(({ code, body }) => {
     data.body = data.body.replace(
       new RegExp(`&lt;&lt;${code}&gt;&gt;`, 'g'),
@@ -113,10 +130,5 @@ export const getStaticProps: GetStaticProps<
     return '<img loading="lazy" src='
   })
 
-  return {
-    props: {
-      data
-    },
-    revalidate: 5
-  }
+  return data
 }
