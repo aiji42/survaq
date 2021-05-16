@@ -19,7 +19,7 @@ const Top: FC<TopProps> = ({ data: serverSideData }) => {
   const router = useRouter()
   useEffect(() => {
     if (!router.query.preview) return
-    fetch(`/api/preview?draftKey=${router.query.preview}`)
+    fetch(`/api/preview/top?draftKey=${router.query.preview}`)
       .then((res) => res.json())
       .then(setData)
       .catch(() => null)
