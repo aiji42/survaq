@@ -24,7 +24,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
 
   if (!data) return null
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full bg-gray-50 text-gray-700">
       <ProductHead {...data} />
       <header className="py-4 sticky top-0 bg-white shadow-sm">
         <div className="w-28 h-9 relative mx-auto">
@@ -39,7 +39,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
       </header>
       <div className="max-w-3xl mx-auto pt-2 md:pt-5">
         <div className="px-2">
-          <h1 className="font-bold text-3xl md:text-4xl whitespace-pre-wrap">
+          <h1 className="font-bold text-3xl md:text-4xl whitespace-pre-wrap text-gray-800">
             {data.title}
           </h1>
         </div>
@@ -60,7 +60,9 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
           <li>
             <a href="/">コーポレートサイト</a>
           </li>
-          <li>お問合せ</li>
+          <li>
+            <a href="mailto:support@survaq.com">お問合せ</a>
+          </li>
         </ul>
         <p className="pt-4">{data.meta.copyright}</p>
       </footer>
