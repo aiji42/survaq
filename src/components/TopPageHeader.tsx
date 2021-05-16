@@ -13,6 +13,7 @@ export const TopPageHeader: FC<Top> = ({ header, images }) => {
             <Image
               src={images.logo.url}
               layout="fill"
+              objectFit="contain"
               alt="ロゴ"
               priority
             />

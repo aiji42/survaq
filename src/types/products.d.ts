@@ -5,7 +5,7 @@ interface Image {
 }
 
 export interface Images {
-  logo?: Image
+  logo: Image
   favicon: Image
 }
 

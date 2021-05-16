@@ -5,6 +5,8 @@ export const Post: FC<{ body: string }> = ({
   body
 }) => {
   return (
-    <div className={style.root} dangerouslySetInnerHTML={{ __html: body }} />
+    <div className="text-gray-700">
+      <div className={style.root} dangerouslySetInnerHTML={{ __html: body }} />
+    </div>
   )
 }
