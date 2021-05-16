@@ -29,7 +29,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
       <header className="py-4 sticky top-0 bg-white shadow-sm">
         <div className="w-28 h-9 relative mx-auto">
           <Image
-            src={data.images.logo.url ?? ''}
+            src={data.images.logo.url}
             layout="fill"
             objectFit="contain"
             alt="ロゴ"
@@ -95,11 +95,22 @@ export const getStaticProps: GetStaticProps<
     .then((res) => res.json())
     .catch(() => null)
 
-  data?.shortCodes?.forEach(({ code, body }) => {
+  if (!data)
+    return {
+      props: {
+        data
+      },
+      revalidate: 5
+    }
+
+  data.shortCodes?.forEach(({ code, body }) => {
     data.body = data.body.replace(
       new RegExp(`&lt;&lt;${code}&gt;&gt;`, 'g'),
       body
     )
+  })
+  data.body = data.body.replace(/\<img src=/g, () => {
+    return '<img loading="lazy" src='
   })
 
   return {
