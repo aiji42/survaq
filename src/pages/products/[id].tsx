@@ -82,9 +82,18 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
 export default Products
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
+  const data: null | { contents: Array<{ id: string }> } = await fetch(
+    `${process.env.MICRO_CMS_API_ENDPOINT}/products?fields=id&limit=999`,
+    {
+      headers: { 'X-API-KEY': process.env.MICRO_CMS_API_KEY ?? '' }
+    }
+  )
+    .then((res) => res.json())
+    .catch(() => null)
+
   return {
-    paths: [],
-    fallback: 'blocking'
+    paths: data?.contents.map((params) => ({ params })) ?? [],
+    fallback: true
   }
 }
 
