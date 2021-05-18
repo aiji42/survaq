@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const Chachat: FC = () => {
   return (
-    <div className="p-2">
-      <div className="bg-white flex flex-col font-sans">
+    <div className="bg-blue-50">
+      <div className="flex flex-col font-sans">
         <div className="container mx-auto px-8">
           <header className="flex flex-col sm:flex-row items-center justify-between py-2 relative">
             <div className="">
@@ -15,31 +15,25 @@ const Chachat: FC = () => {
                 href="#"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
-                Home
+                特徴
               </a>
               <a
                 href="#"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-gray-800 hover:text-blue-300 py-3 px-6"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-gray-800 hover:text-blue-300 py-3 px-6"
-              >
-                Contact
+                価格
               </a>
               <a
                 href="#"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
                 FAQ
+              </a>
+              <a
+                href="#"
+                className="text-gray-800 hover:text-blue-300 py-3 px-6"
+              >
+                お問合せ
               </a>
               <a
                 href="#"
@@ -79,9 +73,12 @@ const Chachat: FC = () => {
               </a>
             </div>
             <div className="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12 text-right">
-              <Image src="/chachat/mainVisual.jpg" width={700} height={609} />
+              <Image src="/chachat/mainVisual.png" width={700} height={609} />
             </div>
           </main>
+          point1: 簡単操作で作成 - データベースあり - メール通知・API連携可能
+          point2: カスタマイズ性 - 分岐 - カスタムスクリプト point3: 分析
+          point4: ABテスト コスト
         </div>
       </div>
     </div>
