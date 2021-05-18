@@ -63,9 +63,7 @@ const Chachat: FC = () => {
                 Marketing
               </h2>
               <p className="text-gray-600 leading-relaxed mb-12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum
-                rutrum metus at enim congue scelerisque. Sed suscipit metu non
-                iaculis semper consectetur adipiscing elit.
+                チャチャットは導入がかんたんなチャット型フォームです。対話形式でユーザの情報を獲得することができます。
               </p>
               <a
                 href="#"
