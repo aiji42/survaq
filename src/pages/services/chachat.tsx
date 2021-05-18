@@ -36,16 +36,10 @@ const Chachat: FC = () => {
                 お問合せ
               </a>
               <a
-                href="#"
-                className="text-blue-700 font-bold hover:text-blue-300 py-3 px-6"
+                href="https://admin.chachat.survaq.com/#/login"
+                className="bg-blue-200 hover:bg-blue-300 font-bold rounded-full text-blue-700 py-3 px-6 ml-3"
               >
-                Login
-              </a>
-              <a
-                href="#"
-                className="bg-blue-200 hover:bg-blue-300 font-bold rounded-full uppercase text-blue-700 py-3 px-6"
-              >
-                Sign Up
+                Sign In / Sign Up
               </a>
             </nav>
             <button className="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5">
