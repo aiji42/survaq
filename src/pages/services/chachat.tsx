@@ -70,9 +70,73 @@ const Chachat: FC = () => {
               <Image src="/chachat/mainVisual.png" width={700} height={609} />
             </div>
           </main>
-          point1: 簡単操作で作成 - データベースあり - メール通知・API連携可能
-          point2: カスタマイズ性 - 分岐 - カスタムスクリプト point3: 分析
-          point4: ABテスト コスト
+          <section className="w-full max-w-6xl mx-auto mt-24">
+            <div className="text-center max-w-xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-600">
+                特徴
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <div className="grid grid-cols-1 gap-x-20 gap-y-10 md:grid-cols-2">
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                  <Image
+                    src="/chachat/mainVisual.png"
+                    width={700}
+                    height={609}
+                  />
+                  <div className="mt-8">
+                    <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      簡単操作で導入・運用
+                    </p>
+                    <p className="my-2 text-gray-600">簡単操作で導入・運用</p>
+                  </div>
+                </div>
+
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                  <Image
+                    src="/chachat/mainVisual.png"
+                    width={700}
+                    height={609}
+                  />
+                  <div className="mt-8">
+                    <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      高カスタマイズ性
+                    </p>
+                    <p className="my-2 text-gray-600">簡単操作で導入・運用</p>
+                  </div>
+                </div>
+
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                  <Image
+                    src="/chachat/mainVisual.png"
+                    width={700}
+                    height={609}
+                  />
+                  <div className="mt-8">
+                    <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      分析サポート
+                    </p>
+                    <p className="my-2 text-gray-600">簡単操作で導入・運用</p>
+                  </div>
+                </div>
+
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                  <Image
+                    src="/chachat/mainVisual.png"
+                    width={700}
+                    height={609}
+                  />
+                  <div className="mt-8">
+                    <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      改善活動のサポート
+                    </p>
+                    <p className="my-2 text-gray-600">簡単操作で導入・運用</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
