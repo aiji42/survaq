@@ -72,14 +72,14 @@ const Chachat: FC = () => {
           </main>
           <section className="w-full max-w-6xl mx-auto mt-24">
             <div className="text-center max-w-xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-600">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-600">
                 特徴
               </h2>
             </div>
 
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-1 gap-x-20 gap-y-10 md:grid-cols-2">
-                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow">
                   <Image
                     src="/chachat/mainVisual.png"
                     width={700}
@@ -93,7 +93,7 @@ const Chachat: FC = () => {
                   </div>
                 </div>
 
-                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow">
                   <Image
                     src="/chachat/mainVisual.png"
                     width={700}
@@ -107,7 +107,7 @@ const Chachat: FC = () => {
                   </div>
                 </div>
 
-                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow">
                   <Image
                     src="/chachat/mainVisual.png"
                     width={700}
@@ -121,7 +121,7 @@ const Chachat: FC = () => {
                   </div>
                 </div>
 
-                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow-xl">
+                <div className="relative bg-white py-6 px-6 rounded-3xl w-full my-4 shadow">
                   <Image
                     src="/chachat/mainVisual.png"
                     width={700}
