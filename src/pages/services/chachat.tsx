@@ -70,7 +70,7 @@ const Chachat: FC = () => {
               <Image src="/chachat/mainVisual.png" width={700} height={609} />
             </div>
           </main>
-          <section className="w-full max-w-5xl mx-auto mt-24">
+          <section className="w-full max-w-5xl mx-auto mt-32">
             <div className="text-center max-w-xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-600">
                 特徴
@@ -132,6 +132,81 @@ const Chachat: FC = () => {
                       改善活動のサポート
                     </p>
                     <p className="my-2 text-gray-600">簡単操作で導入・運用</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="w-full max-w-5xl mx-auto mt-32">
+            <div className="text-center max-w-xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-600">
+                価格
+              </h2>
+
+              <div className="pt-24 flex-clumn md:flex-row">
+                <div className="w-80 p-8 bg-blue-500 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+                  <h1 className="text-white font-semibold text-2xl">Startup</h1>
+                  <p className="pt-2 tracking-wide">
+                    <span className="text-gray-400 align-top">$ </span>
+                    <span className="text-3xl font-semibold">24</span>
+                    <span className="text-gray-400 font-medium">/ user</span>
+                  </p>
+                  <hr className="mt-4 border-1 border-white" />
+                  <div className="pt-8">
+                    <p className="font-semibold text-gray-400 text-left">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        All features in{' '}
+                        <span className="text-white">Basic</span>
+                      </span>
+                    </p>
+                    <p className="font-semibold text-gray-400 text-left pt-5">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        Flexible{' '}
+                        <span className="text-white">call scheduling</span>
+                      </span>
+                    </p>
+                    <p className="font-semibold text-gray-400 text-left pt-5">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        <span className="text-white">15 TB</span> cloud storage
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
+                  <h1 className="text-black font-semibold text-2xl">
+                    Enterprise
+                  </h1>
+                  <p className="pt-2 tracking-wide">
+                    <span className="text-gray-400 align-top">$ </span>
+                    <span className="text-3xl font-semibold">35</span>
+                    <span className="text-gray-400 font-medium">/ user</span>
+                  </p>
+                  <hr className="mt-4 border-1" />
+                  <div className="pt-8">
+                    <p className="font-semibold text-gray-400 text-left">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        All features in{' '}
+                        <span className="text-black">Startup</span>
+                      </span>
+                    </p>
+                    <p className="font-semibold text-gray-400 text-left pt-5">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        Growth <span className="text-black">oriented</span>
+                      </span>
+                    </p>
+                    <p className="font-semibold text-gray-400 text-left pt-5">
+                      <span className="material-icons align-middle">done</span>
+                      <span className="pl-2">
+                        <span className="text-black">Unlimited</span> cloud
+                        storage
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
