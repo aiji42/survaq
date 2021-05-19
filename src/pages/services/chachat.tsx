@@ -5,7 +5,7 @@ const Chachat: FC = () => {
   return (
     <div className="bg-blue-50">
       <div className="flex flex-col font-sans">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4">
           <header className="flex flex-col sm:flex-row items-center justify-between py-2 relative">
             <div className="">
               <Image src="/chachat/logo.png" width={200} height={72} />
@@ -138,78 +138,29 @@ const Chachat: FC = () => {
             </div>
           </section>
           <section className="w-full max-w-5xl mx-auto mt-32">
-            <div className="text-center max-w-xl mx-auto">
+            <div className="text-center mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-600">
                 価格
               </h2>
 
-              <div className="pt-24 flex-clumn md:flex-row">
-                <div className="w-80 p-8 bg-blue-500 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
-                  <h1 className="text-white font-semibold text-2xl">Startup</h1>
-                  <p className="pt-2 tracking-wide">
-                    <span className="text-gray-400 align-top">$ </span>
-                    <span className="text-3xl font-semibold">24</span>
-                    <span className="text-gray-400 font-medium">/ user</span>
-                  </p>
-                  <hr className="mt-4 border-1 border-white" />
-                  <div className="pt-8">
-                    <p className="font-semibold text-gray-400 text-left">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        All features in{' '}
-                        <span className="text-white">Basic</span>
-                      </span>
-                    </p>
-                    <p className="font-semibold text-gray-400 text-left pt-5">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        Flexible{' '}
-                        <span className="text-white">call scheduling</span>
-                      </span>
-                    </p>
-                    <p className="font-semibold text-gray-400 text-left pt-5">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        <span className="text-white">15 TB</span> cloud storage
-                      </span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
-                  <h1 className="text-black font-semibold text-2xl">
-                    Enterprise
-                  </h1>
-                  <p className="pt-2 tracking-wide">
-                    <span className="text-gray-400 align-top">$ </span>
-                    <span className="text-3xl font-semibold">35</span>
-                    <span className="text-gray-400 font-medium">/ user</span>
-                  </p>
-                  <hr className="mt-4 border-1" />
-                  <div className="pt-8">
-                    <p className="font-semibold text-gray-400 text-left">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        All features in{' '}
-                        <span className="text-black">Startup</span>
-                      </span>
-                    </p>
-                    <p className="font-semibold text-gray-400 text-left pt-5">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        Growth <span className="text-black">oriented</span>
-                      </span>
-                    </p>
-                    <p className="font-semibold text-gray-400 text-left pt-5">
-                      <span className="material-icons align-middle">done</span>
-                      <span className="pl-2">
-                        <span className="text-black">Unlimited</span> cloud
-                        storage
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-2xl font-bold mb-8 text-gray-600">
+                業界驚愕{' '}
+                <span className="px-4 text-3xl md:text-5xl font-bold mb-8 text-blue-600">
+                  永久無料
+                </span>
+              </p>
+              <p className="text-2xl text-gray-600 py-1">
+                すべての機能を制限なく永続的に無料でご使用いただけます。
+              </p>
+              <p className="text-2xl text-gray-600 py-1">
+                アップデートに伴う新機能も最速でご使用いただけます。
+              </p>
+              <p className="text-2xl text-gray-600 py-1">
+                どんなに使用しても費用をいただくことはございません。
+              </p>
+              <p className="text-gray-600 py-2">
+                予告なく価格プランが追加・変更になる可能性がございますが、<br />プランが自動的に切り替わることはございませんので、安心してご利用いただけます。
+              </p>
             </div>
           </section>
         </div>
