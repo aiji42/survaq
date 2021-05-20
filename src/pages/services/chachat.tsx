@@ -198,16 +198,46 @@ const Chachat: FC = () => {
                           チャットを起動するための短いHTMLを挿入することができるサイトであれば、どんなサイトでも導入可能です。
                         </span>
                         <br />
-                        
-                        <br />
-                        コストの心配をすることなく、無料で使用していただけるツールを提供することが、多くの類似のサービスとの差別化を行う上で一番効果的であると私達は考えました。
-                        <br />
-                        今後、継続的に行われる追加機能の開発において、一部の機能を有料化する可能性がゼロであるとは言えません。
-                        <br />
-                        しかし、通知なくこの方針を変えることはありませんし、費用をあとからご請求することもございませんのでご安心ください。
+                        このツールはデータベースを有しており、ユーザが入力した情報を保存できます。つまり、御社のサイトに
                       </p>
                     </div>
                   </header>
+                </div>
+              </article>
+              <article className="border-b">
+                <div className="border-l-2 border-transparent">
+                  <header className="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none">
+                    <span className="text-grey-darkest font-thin text-xl">
+                      どのようなサイトと相性が良いですか？
+                    </span>
+                    <div className="rounded-full border border-grey w-7 h-7 flex items-center justify-center">
+                      <svg
+                        aria-hidden="true"
+                        className=""
+                        data-reactid="266"
+                        fill="none"
+                        height="24"
+                        stroke="#606F7B"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewbox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </div>
+                  </header>
+                  <div>
+                    <p className="px-8 py-3 leading-6 text-gray-600">
+                      <span className="font-bold leading-10">
+                        お問合せや申込みなど、ユーザ情報を獲得することを目的としたサイトであれば間違い有りません。
+                      </span>
+                      <br />
+                      基本的にどんなサイトでも導入が可能なので、
+                    </p>
+                  </div>
                 </div>
               </article>
               <article className="border-b">
