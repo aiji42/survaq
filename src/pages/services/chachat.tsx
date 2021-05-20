@@ -37,9 +37,9 @@ const Chachat: FC = () => {
               </a>
               <a
                 href="https://admin.chachat.survaq.com/#/login"
-                className="bg-blue-200 hover:bg-blue-300 font-bold rounded-full text-blue-700 py-3 px-6 ml-3"
+                className="bg-blue-300 hover:bg-blue-400 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
               >
-                Sign In / Sign Up
+                ログイン / 会員登録
               </a>
             </nav>
             <button className="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5">
@@ -60,10 +60,10 @@ const Chachat: FC = () => {
                 チャチャットは永久無料で使用できる導入がかんたんなチャット型フォームです。対話形式でユーザの情報を獲得することができます。専門的な知識は必要ありません。
               </p>
               <a
-                href="#"
-                className="bg-blue-300 hover:bg-blue-400 py-3 px-6 uppercase text-lg font-bold text-white rounded-full"
+                href="https://admin.chachat.survaq.com/#/login"
+                className="bg-blue-300 hover:bg-blue-400 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
               >
-                Learn more
+                会員登録
               </a>
             </div>
             <div className="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12 text-right">
@@ -193,6 +193,19 @@ const Chachat: FC = () => {
                   サイトとの相性は特に有りませんが、運営体制として自社内でサイトを改善していきたいという意思がある、チームや組織とは特に相性が良いはずであると考えています。
                   <br />
                   柔軟な拡張機能を有していますので、改善施策の幅を広げることができるのは間違いありません。その計画をご自身で遂行できるチームには十分フィットするはずです。
+                </p>
+              </Accordion>
+              <Accordion title="利用開始の方法を教えて下さい。">
+                <p className="px-8 py-3 leading-6 text-gray-600">
+                  <span className="font-bold leading-10">
+                    お手伝いができる範囲で可能な限りサポートさせていただきます。サポート宛のメールアドレスにご連絡ください。support@survaq.com
+                  </span>
+                  <br />
+                  運営が間もなくノウハウが多くあるわけではございませんので、すべてのご要望にお応えできるかはわかりません。
+                  <br />
+                  しかし、お役に立てるように誠心誠意努力をいたします。
+                  <br />
+                  また、お客様からの声や要望をもとに機能改善や、マニュアルの作成などを行ってまいりますので、ご意見ご要望を気軽にお問合せください。
                 </p>
               </Accordion>
               <Accordion title="本当に無料で使用できますか？">
