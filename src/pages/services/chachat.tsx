@@ -67,7 +67,7 @@ const Chachat: FC = () => {
               </a>
             </div>
             <div className="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12 text-right">
-              <Image src="/chachat/mainVisual.png" width={700} height={609} />
+              <Image src="/chachat/mainVisual.png" width={900} height={900} />
             </div>
           </main>
           <section className="w-full max-w-5xl mx-auto mt-32">
@@ -80,11 +80,7 @@ const Chachat: FC = () => {
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-1 gap-x-20 gap-y-10 md:grid-cols-2">
                 <div className="relative bg-white p-16 rounded-xl shadow">
-                  <Image
-                    src="/assets/chachat/img/feature_icon03.png"
-                    width={700}
-                    height={609}
-                  />
+                  <Image src="/chachat/startup.png" width={900} height={900} />
                   <div className="mt-8">
                     <p className="text-xl font-bold text-center text-blue-400 my-4">
                       簡単操作で導入・運用
@@ -95,9 +91,9 @@ const Chachat: FC = () => {
 
                 <div className="relative bg-white p-16 rounded-xl shadow">
                   <Image
-                    src="/chachat/customizable.png"
-                    width={700}
-                    height={609}
+                    src="/chachat/customize.png"
+                    width={900}
+                    height={900}
                   />
                   <div className="mt-8">
                     <p className="text-xl font-bold text-center text-blue-400 my-4">
@@ -108,11 +104,7 @@ const Chachat: FC = () => {
                 </div>
 
                 <div className="relative bg-white p-16 rounded-xl shadow">
-                  <Image
-                    src="/chachat/analyzable.svg"
-                    width={700}
-                    height={609}
-                  />
+                  <Image src="/chachat/analyze.png" width={900} height={900} />
                   <div className="mt-8">
                     <p className="text-xl font-bold text-center text-blue-400 my-4">
                       分析サポート
@@ -122,11 +114,7 @@ const Chachat: FC = () => {
                 </div>
 
                 <div className="relative bg-white p-16 rounded-xl shadow">
-                  <Image
-                    src="/assets/chachat/img/feature_icon03.png"
-                    width={531}
-                    height={609}
-                  />
+                  <Image src="/chachat/team.png" width={900} height={900} />
                   <div className="mt-8">
                     <p className="text-xl font-bold text-center text-blue-400 my-4">
                       改善活動のサポート
