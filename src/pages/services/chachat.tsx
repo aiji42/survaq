@@ -95,7 +95,7 @@ const Chachat: FC = () => {
 
                 <div className="relative bg-white p-16 rounded-xl shadow">
                   <Image
-                    src="/assets/chachat/img/feature_icon03.png"
+                    src="/chachat/customizable.png"
                     width={700}
                     height={609}
                   />
@@ -109,7 +109,7 @@ const Chachat: FC = () => {
 
                 <div className="relative bg-white p-16 rounded-xl shadow">
                   <Image
-                    src="/assets/chachat/img/feature_icon03.png"
+                    src="/chachat/analyzable.svg"
                     width={700}
                     height={609}
                   />
@@ -124,7 +124,7 @@ const Chachat: FC = () => {
                 <div className="relative bg-white p-16 rounded-xl shadow">
                   <Image
                     src="/assets/chachat/img/feature_icon03.png"
-                    width={700}
+                    width={531}
                     height={609}
                   />
                   <div className="mt-8">
@@ -274,7 +274,7 @@ const Accordion: FC<{ title: string }> = ({ title, children }) => {
           <div
             className={
               isOpen
-                ? 'rounded-full border border-indigo-600 w-7 h-7 flex items-center justify-center bg-indigo-200'
+                ? 'rounded-full border border-indigo-600 w-7 h-7 flex items-center justify-center'
                 : 'rounded-full border border-gray-400 w-7 h-7 flex items-center justify-center'
             }
           >
