@@ -12,19 +12,19 @@ const Chachat: FC = () => {
             </div>
             <nav className="hidden md:flex text-lg">
               <a
-                href="#"
+                href="#feature"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
                 特徴
               </a>
               <a
-                href="#"
+                href="#price"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
                 価格
               </a>
               <a
-                href="#"
+                href="#faq"
                 className="text-gray-800 hover:text-blue-300 py-3 px-6"
               >
                 FAQ
@@ -72,7 +72,10 @@ const Chachat: FC = () => {
           </main>
           <section className="w-full max-w-5xl mx-auto mt-32">
             <div className="text-center max-w-xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-12 text-gray-600">
+              <h2
+                className="text-3xl md:text-5xl font-bold mb-12 text-gray-600"
+                id="feature"
+              >
                 特徴
               </h2>
             </div>
@@ -148,7 +151,10 @@ const Chachat: FC = () => {
           </section>
           <section className="w-full max-w-5xl mx-auto mt-32">
             <div className="text-center mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-12 text-gray-600">
+              <h2
+                className="text-3xl md:text-5xl font-bold mb-12 text-gray-600"
+                id="price"
+              >
                 価格
               </h2>
 
@@ -175,7 +181,10 @@ const Chachat: FC = () => {
 
           <section className="w-full max-w-5xl mx-auto mt-32">
             <div className="text-center max-w-xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold mb-12 text-gray-600">
+              <h2
+                className="text-3xl md:text-5xl font-bold mb-12 text-gray-600"
+                id="faq"
+              >
                 FAQ
               </h2>
             </div>
