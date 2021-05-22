@@ -37,7 +37,7 @@ const Chachat: FC = () => {
               </a>
               <a
                 href="https://admin.chachat.survaq.com/#/login"
-                className="bg-blue-300 hover:bg-blue-400 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
+                className="bg-blue-400 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
               >
                 ログイン / 会員登録
               </a>
@@ -61,7 +61,7 @@ const Chachat: FC = () => {
               </p>
               <a
                 href="https://admin.chachat.survaq.com/#/login"
-                className="bg-blue-300 hover:bg-blue-400 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
+                className="bg-blue-400 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full"
               >
                 会員登録
               </a>
