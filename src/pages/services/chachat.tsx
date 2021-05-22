@@ -11,7 +11,15 @@ const Chachat: FC = () => {
           dangerouslySetInnerHTML={{
             __html: `var call=function(a,e){var t=document.getElementsByTagName("script")[0],n=document.createElement("script");n.async=!0,n.src=a,n.addEventListener?n.onload=function(){e()}:n.onreadystatechange=function(){"loaded"!=n.readyState&&"complete"!=n.readyState||(n.onreadystatechange=null,e())},t.parentNode.insertBefore(n,t)};call("https://chachat.survaq.com/api/script/botui/chat.min.js",function(){Botui.start("https://chachat.survaq.com/?sessionId=fe863327-ecc5-432a-88f8-b754fa430bd1",false)});`
           }}
-        ></script>
+        />
+        <title>
+          チャチャット | チャット型フォームの革命児 導入・運用コストゼロ！
+        </title>
+        <meta
+          name="description"
+          content="チャチャットは無料で利用できる、対話型入力フォームです。自然な会話の流れでユーザからの情報を引き出すことができます。業界平均の1.44倍のCVR改善を実現しています。"
+        />
+        <link rel="icon" href="/chachat/favicon.ico" />
       </HEAD>
       <div className="bg-blue-50 font-sans">
         <div className="flex flex-col">
