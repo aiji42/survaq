@@ -58,7 +58,7 @@ const Chachat: FC = () => {
                 href="https://admin.chachat.survaq.com/#/login"
                 className="bg-blue-400 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full"
               >
-                会員登録
+                ログイン / 会員登録
               </a>
             </div>
             <div className="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12 text-right">
