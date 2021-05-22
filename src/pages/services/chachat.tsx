@@ -40,11 +40,6 @@ const Chachat: FC = () => {
                 ログイン / 会員登録
               </a>
             </nav>
-            <button className="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5">
-              <span className="w-5 h-px mb-1 bg-orange-500"></span>
-              <span className="w-5 h-px mb-1 bg-orange-500"></span>
-              <span className="w-5 h-px mb-1 bg-orange-500"></span>
-            </button>
           </div>
         </header>
         <main className="container mx-auto px-4">
