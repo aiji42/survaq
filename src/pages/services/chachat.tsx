@@ -59,13 +59,17 @@ const Chachat: FC = () => {
             <section className="flex flex-col-reverse sm:flex-row jusitfy-between items-center py-12">
               <div className="sm:w-2/5 flex flex-col items-center sm:items-start text-center sm:text-left">
                 <h1 className="text-4xl md:text-5xl text-blue-500 font-bold leading-none tracking-wide mb-6">
-                  チャット型フォームの革命児
+                  チャット型フォームの
+                  <br className="hidden md:block" />
+                  革命児
                 </h1>
-                <h2 className="text-3xl text-orange-500 mb-6">
+                <h2 className="text-3xl text-gray-700 mb-6">
                   導入・運用コストゼロ！
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-12">
-                  チャチャットは永久無料で使用できる導入がかんたんなチャット型フォームです。対話形式でユーザの情報を獲得することができます。専門的な知識は必要ありません。
+                  フォームのCVRを会話型入力フォームで改善
+                  <br />
+                  簡単操作インタフェースで御社の改善業務を継続サポート
                 </p>
                 <a
                   href="https://admin.chachat.survaq.com/#/login"
@@ -332,9 +336,7 @@ const Accordion: FC<{ title: string }> = ({ title, children }) => {
         >
           <span
             className={
-              isOpen
-                ? 'text-xl text-blue-400'
-                : 'text-xl text-gray-600'
+              isOpen ? 'text-xl text-blue-400' : 'text-xl text-gray-600'
             }
           >
             {title}
