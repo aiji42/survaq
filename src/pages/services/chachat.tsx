@@ -20,12 +20,28 @@ const Chachat: FC = () => {
           content="チャチャットは無料で利用できる、対話型入力フォームです。自然な会話の流れでユーザからの情報を引き出すことができます。業界平均の1.44倍のCVR改善を実現しています。"
         />
         <link rel="icon" href="/chachat/favicon.ico" />
+        <meta property="og:url" content="https://survaq.com/services/chachat" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="チャチャット | チャット型フォームの革命児 導入・運用コストゼロ！"
+        />
+        <meta
+          property="og:description"
+          content="チャチャットは無料で利用できる、対話型入力フォームです。自然な会話の流れでユーザからの情報を引き出すことができます。業界平均の1.44倍のCVR改善を実現しています。"
+        />
+        <meta
+          property="og:image"
+          content="https://survaq.com/chachat/mainVisual.png"
+        />
+        <meta property="fb:app_id" content="164971672070737" />
+        <meta name="twitter:card" content="summary_large_image" />
       </HEAD>
       <div className="bg-blue-50 font-sans">
         <div className="flex flex-col">
           <header className="bg-blue-700">
             <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between relative">
-              <Image src="/chachat/logo.png" width={200} height={72} />
+              <Image src="/chachat/logo.png" width={200} height={72} priority />
               <nav className="hidden md:flex text-lg">
                 <a
                   href="#feature"
