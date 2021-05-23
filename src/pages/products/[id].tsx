@@ -1,34 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { useRouter } from 'next/dist/client/router'
-import { FC, useEffect, useState } from 'react'
-import { Product } from '../../types/products'
-import { Post } from '../../components/Post'
-import { SnsButtons } from '../../components/SnsButtons'
-import { ProductHead } from '../../components/ProductHead'
+import { client } from '@/libs/microCms'
+import { FC } from 'react'
+import { Product } from '@/types/products'
+import { Post } from '@/components/Post'
+import { SnsButtons } from '@/components/SnsButtons'
+import { ProductHead } from '@/components/ProductHead'
 import Image from 'next/image'
-import { Footer } from '../../components/Footer'
+import { Footer } from '@/components/Footer'
 
-interface ProductProps {
-  data: Product | null
+export interface ProductProps {
+  data: Product
 }
 
-const Products: FC<ProductProps> = ({ data: serverSideData }) => {
-  const [data, setData] = useState<ProductProps['data'] | null>(serverSideData)
-  const router = useRouter()
-  useEffect(() => {
-    if (!router.query.preview) return
-    fetch(
-      `/api/preview/products/${router.query.id}?draftKey=${router.query.preview}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        replaceBody(data)
-        setData(data)
-      })
-      .catch(() => null)
-  }, [router])
-
-  if (!data) return null
+const Products: FC<ProductProps> = ({ data }) => {
   return (
     <div className="w-full bg-gray-50 text-gray-700">
       <ProductHead {...data} />
@@ -69,18 +53,14 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
 export default Products
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
-  const data: null | { contents: Array<{ id: string }> } = await fetch(
-    `${process.env.MICRO_CMS_API_ENDPOINT}/products?fields=id&limit=999`,
-    {
-      headers: { 'X-API-KEY': process.env.MICRO_CMS_API_KEY ?? '' }
-    }
-  )
-    .then((res) => res.json())
-    .catch(() => null)
+  const data = await client.get<{ contents: Array<Product> }>({
+    endpoint: 'products',
+    queries: { fields: 'id', limit: 999 }
+  })
 
   return {
     paths: data?.contents.map((params) => ({ params })) ?? [],
-    fallback: true
+    fallback: 'blocking'
   }
 }
 
@@ -88,34 +68,29 @@ export const getStaticProps: GetStaticProps<
   ProductProps,
   { id: string }
 > = async ({ params }) => {
-  const data: null | Product = await fetch(
-    `${process.env.MICRO_CMS_API_ENDPOINT}/products/${params?.id}`,
-    {
-      headers: { 'X-API-KEY': process.env.MICRO_CMS_API_KEY ?? '' }
-    }
-  )
-    .then((res) => res.json())
-    .catch(() => null)
+  try {
+    const data = await client.get<Product>({
+      endpoint: 'products',
+      contentId: params?.id ?? ''
+    })
 
-  if (!data)
+    replaceBody(data)
+
     return {
       props: {
         data
       },
       revalidate: 5
     }
-
-  replaceBody(data)
-
-  return {
-    props: {
-      data
-    },
-    revalidate: 5
+  } catch (e) {
+    console.log(e)
+    return {
+      notFound: true
+    }
   }
 }
 
-const replaceBody = (data: Product) => {
+export const replaceBody = (data: Product) => {
   data.shortCodes?.forEach(({ code, body }) => {
     data.body = data.body.replace(
       new RegExp(`&lt;&lt;${code}&gt;&gt;`, 'g'),
