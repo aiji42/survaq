@@ -10,13 +10,15 @@ export const TopPageHeader: FC<Top> = ({ header, images }) => {
       <nav className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
           <div className="w-20 h-6 relative">
-            <Image
-              src={images.logo.url}
-              layout="fill"
-              objectFit="contain"
-              alt="ロゴ"
-              priority
-            />
+            <a href="/">
+              <Image
+                src={images.logo.url}
+                layout="fill"
+                objectFit="contain"
+                alt="ロゴ"
+                priority
+              />
+            </a>
           </div>
           <button
             type="button"
@@ -40,25 +42,25 @@ export const TopPageHeader: FC<Top> = ({ header, images }) => {
         >
           <a
             className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-            href="#mission"
+            href="/#mission"
           >
             Mission
           </a>
           <a
             className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-            href="#bussiness"
+            href="/#bussiness"
           >
             Bussiness
           </a>
           <a
             className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-            href="#products"
+            href="/#products"
           >
             Products
           </a>
           <a
             className="text-sm font-medium text-gray-400 transition-colors duration-300 transform hover:text-red-400"
-            href="#company"
+            href="/#company"
           >
             Company
           </a>

@@ -29,4 +29,34 @@
   img {
     display: inline;
   }
+  ul, ol {
+    list-style-position: inside;
+    line-height: 1.8;
+    ul, ol {
+      list-style-position: inside;
+      margin-left: 16px;
+      ul, ol {
+        list-style-position: inside;
+        margin-left: 16px;
+      }
+      ul {
+        list-style-type: square;
+      }
+      ol {
+        list-style-type: lower-roman;
+      }
+    }
+    ul {
+      list-style-type: circle;
+    }
+    ol {
+      list-style-type: lower-latin;
+    }
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
 }

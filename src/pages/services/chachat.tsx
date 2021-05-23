@@ -331,13 +331,10 @@ const Chachat: FC = () => {
                 <a href="/#company">会社情報</a>
               </li>
               <li>
-                <a href="/policies/privacy-policy">プライパシーポリシー</a>
+                <a href="/policies/privacy">プライパシーポリシー</a>
               </li>
               <li>
-                <a href="/policies/term-of-service">利用規約</a>
-              </li>
-              <li>
-                <a href="/policies/legal-notice">特定商取引法に基づく表記</a>
+                <a href="/policies/chachat-terms">利用規約</a>
               </li>
               <li>
                 <a
