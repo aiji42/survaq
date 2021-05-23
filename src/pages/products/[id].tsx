@@ -6,6 +6,7 @@ import { Post } from '../../components/Post'
 import { SnsButtons } from '../../components/SnsButtons'
 import { ProductHead } from '../../components/ProductHead'
 import Image from 'next/image'
+import { Footer } from '../../components/Footer'
 
 interface ProductProps {
   data: Product | null
@@ -57,20 +58,7 @@ const Products: FC<ProductProps> = ({ data: serverSideData }) => {
           <Post {...data} />
         </div>
       </div>
-      <footer className="p-4 mx-auto max-w-3xl text-center text-gray-500">
-        <ul className="flex justify-evenly flex-wrap">
-          <li>
-            <a href="/#company">会社情報</a>
-          </li>
-          <li>
-            <a href="/">コーポレートサイト</a>
-          </li>
-          <li>
-            <a href="mailto:support@survaq.com">お問合せ</a>
-          </li>
-        </ul>
-        <p className="pt-4">{data.meta.copyright}</p>
-      </footer>
+      <Footer copyright={data.meta.copyright} />
       <div className="md:hidden sticky bottom-0 py-2 w-full bg-gray-100">
         <SnsButtons {...data} flex />
       </div>
