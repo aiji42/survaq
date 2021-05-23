@@ -24,7 +24,7 @@ const Chachat: FC = () => {
       <div className="bg-blue-50 font-sans">
         <div className="flex flex-col">
           <header className="bg-blue-700">
-            <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-2 relative">
+            <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between relative">
               <Image src="/chachat/logo.png" width={200} height={72} />
               <nav className="hidden md:flex text-lg">
                 <a
