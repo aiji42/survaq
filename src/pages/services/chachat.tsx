@@ -41,7 +41,13 @@ const Chachat: FC = () => {
         <div className="flex flex-col">
           <header className="bg-blue-700">
             <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between relative">
-              <Image src="/chachat/logo.png" width={200} height={72} priority />
+              <Image
+                src="/chachat/logo.png"
+                width={200}
+                height={72}
+                priority
+                alt="ロゴ"
+              />
               <nav className="hidden md:flex text-lg">
                 <a
                   href="#feature"
@@ -72,7 +78,7 @@ const Chachat: FC = () => {
                 </a>
                 <a
                   href="https://admin.chachat.survaq.com/#/login"
-                  className="bg-blue-400 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
+                  className="bg-blue-500 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full ml-3"
                 >
                   ログイン / 会員登録
                 </a>
@@ -97,13 +103,19 @@ const Chachat: FC = () => {
                 </p>
                 <a
                   href="https://admin.chachat.survaq.com/#/login"
-                  className="bg-blue-400 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full"
+                  className="bg-blue-500 hover:bg-blue-300 py-3 px-6 text-lg font-bold text-white rounded-full"
                 >
                   ログイン / 会員登録
                 </a>
               </div>
               <div className="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12 text-right">
-                <Image src="/chachat/mainVisual.png" width={900} height={900} />
+                <Image
+                  src="/chachat/mainVisual.png"
+                  width={900}
+                  height={900}
+                  priority
+                  alt="メインヴィジュアル"
+                />
               </div>
             </section>
 
@@ -124,9 +136,10 @@ const Chachat: FC = () => {
                       src="/chachat/startup.png"
                       width={900}
                       height={900}
+                      alt="シンプル操作で導入・運用"
                     />
                     <div className="mt-8">
-                      <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      <p className="text-xl font-bold text-center text-blue-500 my-4">
                         シンプル操作で導入・運用
                       </p>
                       <p className="my-2 text-gray-600 tracking-wide leading-6">
@@ -143,9 +156,10 @@ const Chachat: FC = () => {
                       src="/chachat/customize.png"
                       width={900}
                       height={900}
+                      alt="高いカスタマイズ性"
                     />
                     <div className="mt-8">
-                      <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      <p className="text-xl font-bold text-center text-blue-500 my-4">
                         高いカスタマイズ性
                       </p>
                       <p className="my-2 text-gray-600 tracking-wide leading-6">
@@ -162,9 +176,10 @@ const Chachat: FC = () => {
                       src="/chachat/analyze.png"
                       width={900}
                       height={900}
+                      alt="分析のサポート"
                     />
                     <div className="mt-8">
-                      <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      <p className="text-xl font-bold text-center text-blue-500 my-4">
                         分析のサポート
                       </p>
                       <p className="my-2 text-gray-600 tracking-wide leading-6">
@@ -178,9 +193,14 @@ const Chachat: FC = () => {
                   </div>
 
                   <div className="relative bg-white p-6 md:p-12 rounded-xl shadow">
-                    <Image src="/chachat/team.png" width={900} height={900} />
+                    <Image
+                      src="/chachat/team.png"
+                      width={900}
+                      height={900}
+                      alt="改善活動のサポート"
+                    />
                     <div className="mt-8">
-                      <p className="text-xl font-bold text-center text-blue-400 my-4">
+                      <p className="text-xl font-bold text-center text-blue-500 my-4">
                         改善活動のサポート
                       </p>
                       <p className="my-2 text-gray-600 tracking-wide leading-6">
@@ -303,7 +323,7 @@ const Chachat: FC = () => {
             </section>
           </main>
           <footer
-            className="mt-32 p-8 w-full text-center text-gray-500 bg-gray-200"
+            className="mt-32 p-8 w-full text-center text-gray-600 bg-gray-200"
             id="footer"
           >
             <ul className="max-w-5xl mx-auto flex justify-evenly flex-wrap">
@@ -360,7 +380,7 @@ const Accordion: FC<{ title: string }> = ({ title, children }) => {
         >
           <span
             className={
-              isOpen ? 'text-xl text-blue-400' : 'text-xl text-gray-600'
+              isOpen ? 'text-xl text-blue-500' : 'text-xl text-gray-600'
             }
           >
             {title}
