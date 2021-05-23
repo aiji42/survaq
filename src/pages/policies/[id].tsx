@@ -45,6 +45,7 @@ const Policies: FC<PoliciesProps> = ({
         </title>
         <link rel="icon" href={data.sub.images.favicon.url} />
         <meta name="description" content={data.sub.meta.description} />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <div className="w-full bg-gray-50 text-gray-700">
         <TopPageHeader
