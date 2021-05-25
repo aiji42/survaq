@@ -24,11 +24,13 @@ export const getServerSideProps: GetServerSideProps<ProductProps> = async ({
     contentId: contentId,
     queries: { draftKey: draftKey }
   })
-  replaceBody(data)
 
   return {
     props: {
-      data
+      data: {
+        ...data,
+        body: replaceBody(data)
+      }
     }
   }
 }
