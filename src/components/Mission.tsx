@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Top } from '../types/top'
+import { Top } from '@/types/top'
 
 export const Mission: FC<Top> = ({ mission }) => {
   return (

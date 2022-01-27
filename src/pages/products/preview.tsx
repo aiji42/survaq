@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps<ProductProps> = async ({
       notFound: true
     }
 
-  const data = await client.get<Product>({
+  const data = await client.getListDetail<Product>({
     endpoint: 'products',
     contentId: contentId,
     queries: { draftKey: draftKey }

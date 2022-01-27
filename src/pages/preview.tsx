@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps<TopProps> = async ({ query }
       notFound: true
     }
 
-  const data = await client.get<TopType>({
+  const data = await client.getObject<TopType>({
     endpoint: 'top',
     queries: { draftKey: draftKey }
   })

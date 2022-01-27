@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SocialLinks } from '../types/products'
+import { SocialLinks } from '@/types/products'
 
 export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
   socialLinks,

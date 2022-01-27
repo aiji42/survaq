@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Top } from '../types/top'
+import { Top } from '@/types/top'
 import Image from 'next/image'
 
 export const Bussiness: FC<Top> = ({ bussinesses }) => {
@@ -12,7 +12,7 @@ export const Bussiness: FC<Top> = ({ bussinesses }) => {
         >
           Bussiness
         </h2>
-        <div className="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
           {bussinesses.map((item, index) =>
             item.url ? (
               <a

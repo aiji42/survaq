@@ -53,7 +53,7 @@ const Products: FC<ProductProps> = ({ data }) => {
 export default Products
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
-  const data = await client.get<{ contents: Array<Product> }>({
+  const data = await client.getList<Product>({
     endpoint: 'products',
     queries: { fields: 'id', limit: 999 }
   })
@@ -67,7 +67,7 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 export const getStaticProps: GetStaticProps<ProductProps, { id: string }> =
   async ({ params }) => {
     try {
-      const data = await client.get<Product>({
+      const data = await client.getListDetail<Product>({
         endpoint: 'products',
         contentId: params?.id ?? ''
       })

@@ -21,7 +21,6 @@ const Top: FC<TopProps> = ({ data }) => {
         <title>{data.meta.title}</title>
         <link rel="icon" href={data.images.favicon.url} />
         <meta name="description" content={data.meta.description} />
-        <script type="text/javascript">{`var call=function(a,e){var t=document.getElementsByTagName("script")[0],n=document.createElement("script");n.async=!0,n.src=a,n.addEventListener?n.onload=function(){e()}:n.onreadystatechange=function(){"loaded"!=n.readyState&&"complete"!=n.readyState||(n.onreadystatechange=null,e())},t.parentNode.insertBefore(n,t)};call("https://chachat.survaq.com/api/script/botui/chat.min.js",function(){Botui.start("https://chachat.survaq.com/?sessionId=8e1d3124-7213-4c8b-9138-7d726ff989dd",false)});`}</script>
       </Head>
       <div>
         <TopPageHeader {...data} />
@@ -39,7 +38,7 @@ export default Top
 
 export const getStaticProps: GetStaticProps<TopProps> = async () => {
   try {
-    const data = await client.get<TopType>({
+    const data = await client.getObject<TopType>({
       endpoint: 'top'
     })
 
@@ -47,7 +46,7 @@ export const getStaticProps: GetStaticProps<TopProps> = async () => {
       props: {
         data
       },
-      revalidate: 5
+      revalidate: 60
     }
   } catch (e) {
     console.log(e)

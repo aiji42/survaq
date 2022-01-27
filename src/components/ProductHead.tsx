@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { FC } from 'react'
-import { Images, Meta } from '../types/products'
+import { Images, Meta } from '@/types/products'
 
 export const ProductHead: FC<{ meta: Meta; images: Images }> = ({
   meta,
