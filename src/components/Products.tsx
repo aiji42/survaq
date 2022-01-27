@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Top } from '../types/top'
+import { Top } from '@/types/top'
 import Image from 'next/image'
 
 export const Products: FC<Top> = ({ products }) => {

@@ -38,7 +38,7 @@ export default Top
 
 export const getStaticProps: GetStaticProps<TopProps> = async () => {
   try {
-    const data = await client.get<TopType>({
+    const data = await client.getObject<TopType>({
       endpoint: 'top'
     })
 

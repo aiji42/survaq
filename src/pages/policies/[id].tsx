@@ -40,7 +40,7 @@ const Policies: FC<PoliciesProps> = ({ main, sub }) => {
 export default Policies
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
-  const data = await client.get<{ contents: Array<Policy> }>({
+  const data = await client.getList<Policy>({
     endpoint: 'policies',
     queries: { fields: 'id', limit: 999 }
   })
@@ -54,11 +54,11 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 export const getStaticProps: GetStaticProps<PoliciesProps, { id: string }> =
   async ({ params }) => {
     try {
-      const main = client.get<Policy>({
+      const main = client.getListDetail<Policy>({
         endpoint: 'policies',
         contentId: params?.id ?? ''
       })
-      const sub = client.get<Top>({ endpoint: 'top' })
+      const sub = client.getObject<Top>({ endpoint: 'top' })
 
       return {
         props: {

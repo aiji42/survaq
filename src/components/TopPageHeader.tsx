@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { Top } from '../types/top'
+import { Top } from '@/types/top'
 import Image from 'next/image'
 
 export const TopPageHeader: FC<Top> = ({ header, images }) => {
@@ -30,7 +30,7 @@ export const TopPageHeader: FC<Top> = ({ header, images }) => {
               <path
                 fillRule="evenodd"
                 d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-              ></path>
+              />
             </svg>
           </button>
         </div>

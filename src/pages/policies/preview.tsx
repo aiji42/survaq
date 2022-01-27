@@ -20,12 +20,12 @@ export const getServerSideProps: GetServerSideProps<PoliciesProps> = async ({
       notFound: true
     }
 
-  const main = client.get<Policy>({
+  const main = client.getListDetail<Policy>({
     endpoint: 'policies',
     contentId: contentId,
     queries: { draftKey: draftKey }
   })
-  const sub = client.get<Top>({ endpoint: 'top' })
+  const sub = client.getObject<Top>({ endpoint: 'top' })
 
   return {
     props: {
