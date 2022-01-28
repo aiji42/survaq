@@ -21,7 +21,7 @@ export const SnsButtons: FC<{ socialLinks: SocialLinks; flex?: boolean }> = ({
       {socialLinks.twitter && (
         <li className={flex ? 'w-12' : 'w-12 mb-6'}>
           <a
-            href={socialLinks.facebook}
+            href={socialLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
           >
