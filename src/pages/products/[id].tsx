@@ -64,30 +64,32 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<ProductProps, { id: string }> =
-  async ({ params }) => {
-    try {
-      const data = await client.getListDetail<Product>({
-        endpoint: 'products',
-        contentId: params?.id ?? ''
-      })
+export const getStaticProps: GetStaticProps<
+  ProductProps,
+  { id: string }
+> = async ({ params }) => {
+  try {
+    const data = await client.getListDetail<Product>({
+      endpoint: 'products',
+      contentId: params?.id ?? ''
+    })
 
-      return {
-        props: {
-          data: {
-            ...data,
-            body: replaceBody(data)
-          }
-        },
-        revalidate: 5
-      }
-    } catch (e) {
-      console.log(e)
-      return {
-        notFound: true
-      }
+    return {
+      props: {
+        data: {
+          ...data,
+          body: replaceBody(data)
+        }
+      },
+      revalidate: 5
+    }
+  } catch (e) {
+    console.log(e)
+    return {
+      notFound: true
     }
   }
+}
 
 export const replaceBody = ({ body, shortCodes }: Product): string => {
   const shortCodesMap =
@@ -95,7 +97,8 @@ export const replaceBody = ({ body, shortCodes }: Product): string => {
       (res, { code, body }) => ({ ...res, [code]: body }),
       {}
     ) ?? {}
-  return body
-    .replace(/&lt;&lt;(.+?)&gt;&gt;/g, (...[, key]) => shortCodesMap[key])
-    .replace(/\<img src=/g, '<img loading="lazy" src=')
+  return body.replace(
+    /&lt;&lt;(.+?)&gt;&gt;/g,
+    (...[, key]) => shortCodesMap[key]
+  )
 }
