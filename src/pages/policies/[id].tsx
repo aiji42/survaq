@@ -51,26 +51,28 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<PoliciesProps, { id: string }> =
-  async ({ params }) => {
-    try {
-      const main = client.getListDetail<Policy>({
-        endpoint: 'policies',
-        contentId: params?.id ?? ''
-      })
-      const sub = client.getObject<Top>({ endpoint: 'top' })
+export const getStaticProps: GetStaticProps<
+  PoliciesProps,
+  { id: string }
+> = async ({ params }) => {
+  try {
+    const main = client.getListDetail<Policy>({
+      endpoint: 'policies',
+      contentId: params?.id ?? ''
+    })
+    const sub = client.getObject<Top>({ endpoint: 'top' })
 
-      return {
-        props: {
-          main: await main,
-          sub: await sub
-        },
-        revalidate: 5
-      }
-    } catch (e) {
-      console.log(e)
-      return {
-        notFound: true
-      }
+    return {
+      props: {
+        main: await main,
+        sub: await sub
+      },
+      revalidate: 60 * 30
+    }
+  } catch (e) {
+    console.log(e)
+    return {
+      notFound: true
     }
   }
+}
