@@ -46,6 +46,13 @@ const Products: FC<ProductProps> = ({ data }) => {
       <div className="md:hidden sticky bottom-0 py-2 w-full bg-gray-100">
         <SnsButtons {...data} flex />
       </div>
+      {data.script && (
+        <script
+          dangerouslySetInnerHTML={{
+            __html: data.script
+          }}
+        />
+      )}
     </div>
   )
 }

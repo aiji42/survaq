@@ -50,4 +50,5 @@ export interface Product {
   images: Images
   meta: Meta
   socialLinks: SocialLinks
+  script?: string
 }
