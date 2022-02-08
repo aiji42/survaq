@@ -16,7 +16,7 @@ const Products: FC<ProductProps> = ({ data }) => {
   return (
     <div className="w-full bg-gray-50 text-gray-700">
       <ProductHead {...data} />
-      <header className="py-2 sticky top-0 bg-white shadow-sm">
+      <header className="py-2 sticky top-0 bg-white shadow-sm z-10">
         <div className="w-28 h-9 relative mx-auto">
           <Image
             src={data.images.logo.url}
