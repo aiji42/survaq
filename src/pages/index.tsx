@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps<TopProps> = async () => {
       props: {
         data
       },
-      revalidate: 60 * 30
+      revalidate: 60 ** 2 * 24
     }
   } catch (e) {
     console.log(e)

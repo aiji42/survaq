@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps<
           body: replaceBody(data)
         }
       },
-      revalidate: 60 * 30
+      revalidate: 60 ** 2 * 24
     }
   } catch (e) {
     console.log(e)
