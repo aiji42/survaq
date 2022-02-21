@@ -29,11 +29,11 @@ const handler: NextApiHandler = async (req, res) => {
   console.log(req.body)
   try {
     if (req.body.api === 'top') {
-      await res.unstable_revalidate('/')
+      res.unstable_revalidate('/')
       res.status(200)
       return
     }
-    await res.unstable_revalidate(`/${req.body.api}/${req.body.id}`)
+    res.unstable_revalidate(`/${req.body.api}/${req.body.id}`)
     res.status(200)
     return
   } catch (e) {
