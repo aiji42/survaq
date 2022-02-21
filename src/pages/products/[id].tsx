@@ -73,12 +73,16 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 
 export const getStaticProps: GetStaticProps<
   ProductProps,
-  { id: string }
-> = async ({ params }) => {
+  { id: string },
+  { draftKey: string }
+> = async ({ params, previewData }) => {
   try {
     const data = await client.getListDetail<Product>({
       endpoint: 'products',
-      contentId: params?.id ?? ''
+      contentId: params?.id ?? '',
+      queries: previewData?.draftKey
+        ? { draftKey: previewData.draftKey }
+        : undefined
     })
 
     return {

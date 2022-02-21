@@ -53,12 +53,16 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 
 export const getStaticProps: GetStaticProps<
   PoliciesProps,
-  { id: string }
-> = async ({ params }) => {
+  { id: string },
+  { draftKey: string }
+> = async ({ params, previewData }) => {
   try {
     const main = client.getListDetail<Policy>({
       endpoint: 'policies',
-      contentId: params?.id ?? ''
+      contentId: params?.id ?? '',
+      queries: previewData?.draftKey
+        ? { draftKey: previewData.draftKey }
+        : undefined
     })
     const sub = client.getObject<Top>({ endpoint: 'top' })
 

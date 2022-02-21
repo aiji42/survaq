@@ -36,10 +36,17 @@ const Top: FC<TopProps> = ({ data }) => {
 
 export default Top
 
-export const getStaticProps: GetStaticProps<TopProps> = async () => {
+export const getStaticProps: GetStaticProps<
+  TopProps,
+  {},
+  { draftKey: string }
+> = async ({ previewData }) => {
   try {
     const data = await client.getObject<TopType>({
-      endpoint: 'top'
+      endpoint: 'top',
+      queries: previewData?.draftKey
+        ? { draftKey: previewData.draftKey }
+        : undefined
     })
 
     return {
