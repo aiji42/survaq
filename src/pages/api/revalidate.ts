@@ -1,17 +1,42 @@
-import { NextApiHandler } from 'next'
+import { NextApiHandler, NextApiRequest } from 'next'
+import crypto from 'crypto'
+
+const validate = (request: NextApiRequest): boolean => {
+  const expectedSignature = crypto
+    .createHmac('sha256', process.env.SECRET_KEY ?? '')
+    .update(
+      typeof request.body === 'string'
+        ? request.body
+        : JSON.stringify(request.body)
+    )
+    .digest('hex')
+  const signature = request.headers['x-microcms-signature'] as string
+  if (
+    !crypto.timingSafeEqual(
+      Buffer.from(signature),
+      Buffer.from(expectedSignature)
+    )
+  ) {
+    throw new Error('Invalid signature.')
+  }
+  return true
+}
 
 const handler: NextApiHandler = async (req, res) => {
-  if (req.query.secret !== process.env.SECRET_KEY) {
-    return res.status(401).json({ message: 'Invalid token' })
+  if (!req.body.api || !req.body.id) {
+    return res.status(400).json({ message: 'Bad Request' })
   }
-
-  if (typeof req.query.revalidateTarget === 'string') {
-    await res.unstable_revalidate(req.query.revalidateTarget)
-    res.redirect(req.query.revalidateTarget)
+  try {
+    validate(req)
+    if (req.body.api === 'top') {
+      await res.unstable_revalidate('/')
+      return
+    }
+    await res.unstable_revalidate(`/${req.body.api}/${req.body.id}`)
     return
+  } catch (e) {
+    return res.status(400).json({ message: 'Bad Request' })
   }
-
-  res.redirect('/')
 }
 
 export default handler
