@@ -31,9 +31,11 @@ const handler: NextApiHandler = async (req, res) => {
     validate(req)
     if (req.body.api === 'top') {
       await res.unstable_revalidate('/')
+      res.status(200)
       return
     }
     await res.unstable_revalidate(`/${req.body.api}/${req.body.id}`)
+    res.status(200)
     return
   } catch (e) {
     return res.status(400).json({ message: 'Bad Request' })
