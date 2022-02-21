@@ -29,6 +29,7 @@ const handler: NextApiHandler = async (req, res) => {
   console.log(req.body)
   try {
     validate(req)
+    console.log('valid!')
     if (req.body.api === 'top') {
       await res.unstable_revalidate('/')
       res.status(200).json({})
@@ -38,6 +39,7 @@ const handler: NextApiHandler = async (req, res) => {
     res.status(200).json({})
     return
   } catch (e) {
+    console.error('invalid!')
     return res.status(400).json({ message: 'Bad Request' })
   }
 }
