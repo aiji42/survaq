@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps<
       props: {
         data
       },
-      revalidate: 60 ** 2 * 24
+      revalidate: 60 ** 2 * 24 * 31
     }
   } catch (e) {
     console.log(e)

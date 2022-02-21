@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps<
         main: await main,
         sub: await sub
       },
-      revalidate: 60 ** 2 * 24
+      revalidate: 60 ** 2 * 24 * 31
     }
   } catch (e) {
     console.log(e)
