@@ -26,6 +26,7 @@ const handler: NextApiHandler = async (req, res) => {
   if (!req.body.api || !req.body.id) {
     return res.status(400).json({ message: 'Bad Request' })
   }
+  console.log(req.body)
   try {
     validate(req)
     if (req.body.api === 'top') {
